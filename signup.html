@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #form{
+         width: 35%;
+         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+         border-radius: 10px;
+         margin: auto;
+         height: 450px;
+     }
+     #sig>input{
+         width: 98%;
+         height: 40px;
+         border-radius: 10px;
+         display: inline-block;
+         margin-top: 20px;
+         border: 2px solid rgb(225, 218, 218);
+         padding-left: 10px;
+     }
+     #form>div{
+         margin: auto;
+         width: 85%;
+     }
+     p{
+         margin-bottom: 5px;
+         color: grey;
+     }
+
+    #form>input{
+        width: 82%;
+        height: 40px;
+        display: block;
+        margin: auto;
+        border-radius: 10px;
+        border: 2px solid rgb(225, 218, 218);
+        padding-left: 10px;
+        margin-top: 15px;
+    }
+    button{
+    background-color: #00afef;
+    color: white;
+    width: 85%;
+    height: 40px;
+    border: 0;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    font-size: 18px;
+    }
+    </style>
+</head>
+<body>
+    <form id="form">
+       <div id="sig">
+        <input type="tel" placeholder="Phone Number">
+        <input type="text" placeholder="First Name" id="fname">
+        <input type="text" placeholder="Last Name" id="lname">
+        <input type="text" placeholder="Email ID" id="email">
+       </div>
+        <div>
+            <p>Gender</p>
+            <input type="radio" name="male" id="html">Male
+            <input type="radio" name="female" id="radi">Female
+            <input type="radio" name="not specified" id="radio">Not Specified
+        </div>
+        <input type="date" id="dat">
+        <button>SIGN UP</button>
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",fun1)
+    
+    var information=[]
+    
+    function fun1(){
+        event.preventDefault()
+        var data={
+            phone:document.querySelector("input").value,
+            first:document.querySelector("#fname").value,
+            last:document.querySelector("#lname").value,
+            email:document.querySelector("#email").value,
+            male:document.querySelector("#html").value,
+            female:document.querySelector("#radi").value,
+            notspecify:document.querySelector("#radio").value,
+            date:document.querySelector("#dat").value
+        }
+        
+        information.push(data)
+        console.log(data)
+        localStorage.setItem("details",JSON.stringify(information))
+        if(data.phone=="" || data.first=="" || data.last=="" || data.email=="" || data.male==""
+        || data.female=="" || data.notspecify=="" || data.date=="")
+        {
+            alert("Enter details")
+        }
+        else{
+            window.location.href="otp.html"
+        }
+    }
+</script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #form{
+        width: 35%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+        margin: auto;
+        height: 450px;
+    }
+    input{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        text-align: center;
+        border: 2px solid rgb(216, 200, 200);
+        border-radius: 5px;
+    }
+    #form>div{
+        width: 67%;
+        margin: auto;
+    }
+    img{
+        display: block;
+        margin: auto;
+        padding-top: 20px;
+    }
+    p,h4{
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #p{
+        color: grey;
+        font-size: 12px;
+    }
+    span{
+        color: #00afef;
+    }
+
+    button{
+    background-color: #00afef;
+    width: 85%;
+    height: 40px;
+    border: 0;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+     }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <img src="https://mamaearth.in/static/mamaearth/otp.svg" alt="">
+        <p>Sent to <span>XXXXXXXX0822</span></p>
+         <p>Enter OTP</p>
+       <div>
+        <input type="text" id="digit-1" name="digit-1" maxlength="1"/>
+        <input type="text" id="digit-2" name="digit-2" maxlength="1"/>
+        <input type="text" id="digit-3" name="digit-3" maxlength="1"/>
+        <input type="text" id="digit-4" name="digit-4" maxlength="1"/>
+       </div>
+        <h4>Resent OTP</h4>
+        <button><a>VERIFY</a></button>
+        <p id="p">DO NOT SHARE THIS OTP WITH ANYONE</p>
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",fun1)
+    
+    var information=[]
+    
+    function fun1(){
+        event.preventDefault()
+        var data={
+            digit1:document.querySelector("#digit-1").value,
+            digit2:document.querySelector("#digit-2").value,
+            digit3:document.querySelector("#digit-3").value,
+            digit4:document.querySelector("#digit-4").value
+        }
+        information.push(data)
+        console.log(data)
+        localStorage.setItem("otp",JSON.stringify(information))
+
+        if(data.digit1=="1" && data.digit2=="2" && data.digit3=="3" && data.digit4=="4")
+        
+        {
+            window.location.href="index.html"
+        }
+        else{
+            alert("Enter correct otp")
+        }
+    }
+</script>

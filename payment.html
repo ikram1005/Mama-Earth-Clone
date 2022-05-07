@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 55%;
+            border: 2px solid rgb(201, 194, 194);
+        }
+        #add{
+            margin: auto;
+            width: 95%;
+        }
+      #add>input{
+         width: 45%;
+         margin-left: 5px;
+         margin-bottom: 15px;
+         height: 30px;
+      }
+      #add>div{
+        width: 100%;
+      }
+      #add>div>input{
+          width: 29%;
+          margin-left: 5px;
+          height: 30px;
+      }
+        #last{
+            width: 89%;
+            margin-left: 18px;
+            height: 30px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+        #box2{
+            display: flex;
+            justify-content: space-between;
+            height: 200px;
+            width: 95%;
+            margin: auto;
+            gap: 20px;
+        }
+        #box2>div:nth-child(1){
+        width: 36%;
+        border: 1px solid black;
+        }
+        hr{
+            background-color: rgb(193, 183, 183);
+        }
+        #box2>div:nth-child(2){
+           width: 65%;
+           border: 1px solid black;
+        }
+        #box2>div+div>input{
+           width: 90%;
+           height: 30px;
+           margin-left: 10px;
+           margin-top: 10px;
+        }
+        #sm{
+            width: 100%;
+            display: flex;
+        }
+        #sm>input{
+            width: 42%;
+            height: 30px;
+           margin-left: 10px;
+           margin-top: 10px;
+        }
+        button{
+              background-color: #00afef;
+            width: 95%;
+            height: 40px;
+            border: 0;
+            margin: auto;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        h2{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+      <h2>New Delivery Address</h2>
+      <div id="add">
+        <input type="text" placeholder="First Name*">
+        <input type="text" placeholder="Last Name*">
+        <input type="text" Email ID>
+        <input type="text" placeholder="Phone Number*">
+        <div><input type="text" placeholder="PIN Code*">
+            <input type="text" placeholder="City*">
+            <input type="text" placeholder="State*"></div>
+      </div>
+      <input type="text" id="last" placeholder="Address">
+      <div id="box2">
+          <div>
+              <input type="radio">UPI
+              <hr>
+              <input type="radio">CREDIT/DEBIT CARD
+              <hr>
+              <input type="radio">NET BANKING
+              <hr>
+              <input type="radio">WALLETS
+              <hr>
+              <input type="radio">CASH ON DELIVERY
+          </div>
+          <div>
+              <input type="text" placeholder="Card Number">
+              <div id="sm"><input type="text" placeholder="MM/YY">
+              <input type="text" placeholder="CVV"></div>
+              <input type="text" placeholder="Name on the Card">
+              <div><button>PLACE ORDER</button></div>
+          </div>
+          
+      </div>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",clickme)
+
+
+
+function clickme(){
+    alert("Your Order is Successfully Placed")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

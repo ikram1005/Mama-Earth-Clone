@@ -1,0 +1,113 @@
+ 
+ /* dropdown sub1 */
+
+#black>ul>li>a{
+    text-decoration: none;
+    color: #585050;
+}
+.sub-menu-1>ul{
+    display: block;
+    position: relative;
+    background-color: white
+}
+.sub-menu-1{
+    display: none;
+}
+#black>ul>li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+}
+.sub-menu-1{
+    width: 100px;
+    text-align: left;
+    margin-top: 5px;
+    border-top: 2px solid #00afef;
+    margin-left: -30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sub-menu-1>ul>li{
+    list-style: none;
+    text-align: left;
+    margin-left: -25px;
+    line-height: 25px;
+    font-size: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500; 
+}
+.sub-menu-1>ul>li:first-child{
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+#black>ul>li:nth-child(1)>a{
+    color: #00afef;
+}
+#balck>ul>li{
+    text-align: center;
+}
+/* dropdown sub1 */
+#pink>li>a{
+    text-decoration: none;
+    color: #585050;
+}
+#pink>li{
+    list-style: none;
+    margin-left: 10px;
+}
+.sub-menu-2{
+    display: none;
+}
+.sub-menu-2>ul{
+    display: block;
+    position: relative;
+}
+#pink>li:hover .sub-menu-2{
+    display: block;
+    position: absolute;
+}
+
+.sub-menu-2{
+    width: 250px;
+    text-align: left;
+    margin-top: 1px;
+    border-top: 3px solid #00afef;
+    margin-left: -130px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sub-menu-2>ul>li{
+    list-style: none;
+    text-align: left;
+    margin-left: -25px;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.sub-menu-2>ul>li>i{
+    margin-right: 10px;
+    color: #00afef;
+}
+#hr{
+    background-color: black;
+}
+.sub-menu-2>button{
+    background-color: #00afef;
+    width: 80%;
+    height: 40px;
+    border: 0;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.sub-menu-2>button>a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+.sub-menu-2>ul>li>a{
+    text-decoration: none;
+    color: black;
+}
+.sub-menu-2>ul>li>a:hover{
+    color: #00afef;
+}

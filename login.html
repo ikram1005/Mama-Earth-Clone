@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #form{
+         width: 35%;
+         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+         border-radius: 10px;
+         margin: auto;
+         height: 450px;
+     }
+     h2{
+        text-align: center;
+        color: #00afef;
+        padding-top: 20px;
+     }
+     #form>div{
+         display: flex;
+         width: 85%;
+         margin: auto;
+     }
+     #form>div>img{
+         width: 65px;
+         height: 69px;
+         margin-left: 20px;
+     }
+     #form>div>p{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-left: 15px;
+        margin-top: 1px;
+        color: rgb(111, 101, 101);
+     }
+     input{
+         width: 85%;
+         height: 40px;
+         display: block;
+         margin: auto;
+         border: 2px solid rgb(209, 199, 199);
+         border-radius: 5px;
+         margin-top: 30px;
+         padding-left: 10px;
+     }
+     p{
+         width: 90%;
+         text-align: left;
+         margin-left: 20px;
+         color: rgb(111, 101, 101);
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         font-size: 14px;
+         margin-top: 40px;
+     }
+     span{
+         color: #00afef;
+         font-weight: bold;
+     }
+     button{
+    background-color: #00afef;
+    width: 85%;
+    height: 40px;
+    border: 0;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+     }
+     button>a{
+         color: white;
+         text-decoration: none;
+     }
+     h4>a{
+         text-decoration: none;
+         color: #00afef;
+         font-weight: bold;
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     }
+     h4{
+         text-align: center;
+     }
+
+    </style>
+</head>
+<body>
+   
+    <form id="form">
+        <h2>Log in to get Started</h2>
+        <div>
+            <img src="https://mamaearth.in/static/mamaearth/login.svg" alt="">
+            <p>Get access to your orders,track previous
+                order & Redeem Mama Cash
+            </p>
+        </div>
+        <input type="tel" placeholder="Phone Number">
+        <p>By Continuing , you agree to Mamaearth's <span> Terms
+            and Conditions</span> and <span>Privacy Policy</span>
+        </p>
+        <button><a href="">LOGIN WITH OTP</a></button>
+         <h4><a href="index.html">CONTINUE AS GUEST</a></h4>
+    </form>
+   
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",fun1)
+    
+    var information=[]
+    
+    function fun1(){
+        event.preventDefault()
+        var data={
+            phone:document.querySelector("input").value
+        }
+        information.push(data)
+        console.log(data)
+        localStorage.setItem("phoneNumber",JSON.stringify(information))
+        if(data.phone==""){
+            alert("Enter PhoneNumber")
+        }
+        else{
+            window.location.href="signup.html"
+        }
+    }
+</script>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+         #container{
+             width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            gap: 20px;
+        }
+        #container>div{
+            border: 1px solid grey;
+        }
+        #container>div>img{
+            width: 245px;
+            height: 249px;
+        }
+        #container>div>p{
+          width: 95%;
+          margin: auto;
+          text-align: center;
+          color: black;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #container>div>h3{
+        width: 100%;
+        color: green;
+        text-align: center;
+         }
+         #container>div>h2{
+             text-align: center;
+         }
+         #container>div>button{
+          border-radius: 3px;
+          font-size: 18px;
+          width: 100%;
+          height: 43px;
+          background-color: white;
+          border: 2px solid #00afef;
+           color: #00afef;
+          display: block;
+         }
+         #container>div>button:hover{
+             background-color: #00afef;
+             color: white;
+         }
+
+    </style>
+</head>
+<body>
+    <h1>OUR PRODUCTS</h1>
+    <div id="container">
+    </div>
+</body>
+</html>
+<script>
+    var product=[
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/_/o/_onion-oil-250ml__1.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/o/n/onion-hair-shampoo-4000ml-with-ingredient_3.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/o/n/onion-hair-conditioner-250ml-with-ingredient_2.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/o/n/onion_hair_mask_1.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/a/l/aloe_vera_gel_1.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/a/c/acv-hair-mask-1.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/b/h/bhringamla_shampoo_1.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/t/e/tea_tree_shampoo_1.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/b/h/bhringamla_oil_2.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/r/i/rice-conditiner-with-ingredient_1.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-hair-oil-with-ingredient_whxo04ua50bep7qk.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/r/i/rice-shampoo-with-ingredient_1_1_.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/t/e/tea_tree_hair_mask_1.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/a/l/almond-range-copy.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        },
+        {
+            img:"https://honasa-mamaearth-production.imgix.net/a/l/almond-conditioner.jpg?auto=compress&fit=scale&w=400&h=400",
+            name:"Onion Hair Oil for Hair Regrowth and Hair Fall Control,250ml",
+            para:"Boosts Hair Growth | Adds Strength & Shine",
+            price:"599"
+        }
+    ];
+ 
+    var cartData=JSON.parse(localStorage.getItem("cart"))||[]
+product.map(function(elem){
+
+var box=document.createElement("div");
+
+var imag=document.createElement("img");
+imag.src=elem.img;
+
+var nam=document.createElement("p");
+nam.innerText=elem.name;
+
+var par=document.createElement("h3");
+par.innerText=elem.para;
+
+var pric=document.createElement("h2");
+pric.innerText=elem.price;
+
+var btn=document.createElement("button");
+btn.innerText="Add to Cart";
+btn.addEventListener("click",function(){
+    addToCart(elem);
+});
+
+box.append(imag,nam,par,pric,btn);
+
+document.querySelector("#container").append(box);
+})
+function addToCart(elem){
+    console.log(elem);
+    cartData.push(elem)
+    localStorage.setItem("cart",JSON.stringify(cartData))
+    alert("item added to cart")
+}
+</script>

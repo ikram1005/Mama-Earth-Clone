@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        #port{
+            width: 95%;
+            height: 350px;
+            border: 2px solid rgb(204, 191, 191);
+            margin: auto;
+            border-radius: 10px;
+            display: flex;
+        }
+        #side{
+            width: 200px;
+            height: 300px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border: 2px solid rgb(219, 209, 209);
+            border-radius: 10px;
+            margin: 25px;
+        }
+        i{
+            margin-left: 15px;
+            margin-right: 10px;
+            color: #00afef;
+        }
+        hr{
+            border: 0.5px solid rgb(216, 216, 216); 
+        }
+        #side>p{
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #side>p:hover{
+            color: #00afef;
+        }
+        #file{
+            width: 380px;
+            height: 200px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+            display: flex;
+        }
+        img{
+            width: 131px;
+            height: 131px;
+        }
+        #file>div{
+            margin: 20px 0px 30px 20px;
+            width: 131px;
+            height: 131px;
+        }
+        #file>div+div>p{
+            margin: 5px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: left;
+        }
+       h3{
+           margin-top: 5px;
+           margin-bottom: 5px;
+           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       }
+      #info{
+          height: 70%;
+          margin-top: 20px;
+      }
+    </style>
+</head>
+<body>
+    <div id="port">
+        <div id="side">
+           <p><i class='fas fa-user-alt'></i>Your Profile</p>
+           <hr>
+           <p><i class="fa fa-shopping-cart"></i>Your Orders</p>
+           <hr>
+           <p><i class="fa fa-location-dot"></i>Manage Addressess</p>
+           <hr>
+           <p><i class="fa fa-phone"></i>Contact Us</p>
+           <hr>
+           <p><i class="fa fa-right-from-bracket"></i>Logout</p>
+        </div>
+        <div id="file">
+            <div>
+                <img src="https://mamaearthp.imgix.net/wysiwyg/male.png?auto=format" alt="">
+            </div>
+
+            <div id="info">
+            </div>
+            </div>
+
+    </div>
+</body>
+</html>
+<script>
+    var data=JSON.parse(localStorage.getItem("details"))
+
+    console.log(data)
+
+    
+    data.map(function(elem){
+
+        var h3=document.createElement("h3")
+        h3.innerText=elem.first+" "+elem.last
+        var p1=document.createElement("p")
+        p1.innerText=elem.phone
+       
+        var p3=document.createElement("p")
+        p3.innerText=elem.email
+       
+        document.querySelector("#info").append(h3,p1,p3)
+
+
+
+    })
+</script>
